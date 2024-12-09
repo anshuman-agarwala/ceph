@@ -9,7 +9,7 @@ jobs:
         run: |
           ./do_cmake.sh
           cd build
-          ninja
+          ninja -j2
           ninja install
           ctest -j$(nproc)
         shell: bash
