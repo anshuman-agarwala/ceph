@@ -650,6 +650,7 @@ add_subdirectory(osdc)
 add_subdirectory(perfglue)
 
 add_library(rados_snap_set_diff_obj OBJECT librados/snap_set_diff.cc)
+add_dependencies(rados_snap_set_diff_obj legacy-option-headers)
 target_link_libraries(rados_snap_set_diff_obj
   PRIVATE legacy-option-headers)
 
@@ -1037,6 +1038,7 @@ if(WITH_RBD)
     target_link_libraries(krbd
       keyutils::keyutils
       legacy-option-headers)
+    add_dependencies(krbd legacy-option-headers)
   endif()
   add_subdirectory(librbd)
   if(WITH_FUSE)
