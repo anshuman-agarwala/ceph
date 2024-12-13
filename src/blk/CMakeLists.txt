@@ -22,6 +22,7 @@ endif()
 
 if(libblk_srcs)
   add_library(blk STATIC ${libblk_srcs})
+  add_dependencies(rados_snap_set_diff_obj legacy-option-headers)
   target_include_directories(blk PRIVATE "./")
 endif()
 
