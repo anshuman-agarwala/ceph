@@ -1,0 +1,16 @@
+name: Build ceph for ppc64le
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: mock env
+        run: |
+          ./do_cmake.sh
+          cd build
+          ninja -j2
+          ninja install
+          ctest -j$(nproc)
+        shell: bash
+      - run: echo "🍏 This job's status is ${{ job.status }}."
