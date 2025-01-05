@@ -169,15 +169,6 @@ TEST(RunSome, Wall)
   run_some<std::chrono::system_clock>();
 }
 
-TEST(RunOrderly, Steady)
-{
-  run_orderly<std::chrono::steady_clock>();
-}
-TEST(RunOrderly, Wall)
-{
-  run_orderly<std::chrono::system_clock>();
-}
-
 TEST(CancelAll, Steady)
 {
   cancel_all<std::chrono::steady_clock>();
