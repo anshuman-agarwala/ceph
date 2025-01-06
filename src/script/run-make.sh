@@ -102,7 +102,7 @@ EOM
     #cmake_opts+=" -DCMAKE_CXX_FLAGS_DEBUG=-Werror"
     cmake_opts+=" -DENABLE_GIT_VERSION=OFF"
     cmake_opts+=" -DWITH_GTEST_PARALLEL=ON"
-    cmake_opts+=" -DWITH_FIO=ON"
+    #cmake_opts+=" -DWITH_FIO=ON"
     cmake_opts+=" -DWITH_CEPHFS_SHELL=ON"
     cmake_opts+=" -DWITH_GRAFANA=ON"
     cmake_opts+=" -DWITH_SPDK=ON"
